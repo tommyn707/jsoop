@@ -1,14 +1,58 @@
-var tigger = { character: "Tigger" };
-var pooh = { character: "Winnie the Pooh" };
-var piglet = { character: "Piglet" };
-var bees = { character: "Bees" };
-var robin = { character: "Christopher Robin" };
-var owl = { character: "Owl" };
-var rabbit = { character: "Rabbit" };
-var gopher = { character: "Gopher" };
-var kanga = { character: "Kanga" };
-var eeyore = { character: "Eeyore" };
-var heffa = { character: "Heffalumps" };
+var tigger = { character: "Tigger",
+greet: function(){
+    console.log("Tigger says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var pooh = { character: "Winnie the Pooh" ,
+greet: function(){
+    console.log("Pooh says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var piglet = { character: "Piglet" ,
+greet: function(){
+    console.log("Piglet says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var bees = { character: "Bees" ,
+greet: function(){
+    console.log("Bees says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var robin = { character: "Christopher Robin" ,
+greet: function(){
+    console.log("Christopher says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var owl = { character: "Owl" ,
+greet: function(){
+    console.log("Owl says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var rabbit = { character: "Rabbit" ,
+greet: function(){
+    console.log("Rabbit says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var gopher = { character: "Gopher" ,
+greet: function(){
+    console.log("Gopher says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var kanga = { character: "Kanga" ,
+greet: function(){
+    console.log("Kanga says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var eeyore = { character: "Eeyore" ,
+greet: function(){
+    console.log("Eeyore says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
+var heffa = { character: "Heffalumps" ,
+greet: function(){
+    console.log("Heffalumps says, 'The wonderful thing about Tiggers is Tiggers are wonderful things!'");
+}
+};
 
 tigger.north = pooh;
 
@@ -57,6 +101,7 @@ function move(dir){
         else {
             player.location = player.location.north;
             console.log("You head North and arrive at " + player.location.character + "'s house!");
+            player.location.greet();
         }
     }
     if(dir == "south" || dir == "South"){
@@ -66,6 +111,7 @@ function move(dir){
         else {
             player.location = player.location.south;
             console.log("You head South and arrive at " + player.location.character + "'s house!");
+            player.location.greet();
         }
     }
     if(dir == "east" || dir == "East"){
@@ -75,6 +121,7 @@ function move(dir){
         else {
             player.location = player.location.east;
             console.log("You head East and arrive at " + player.location.character + "'s house!");
+            player.location.greet();
         }
     }
     if(dir == "west" || dir == "West"){
@@ -84,6 +131,7 @@ function move(dir){
         else {
             player.location = player.location.west;
             console.log("You head West and arrive at " + player.location.character + "'s house!");
+            player.location.greet();
         }
     }
 }
@@ -94,4 +142,4 @@ move("north");
 move("east");
 move("north");
 move("north");
-move("east");
+move("west");
